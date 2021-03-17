@@ -17,7 +17,7 @@
 			type="com.empstruts.DeleteRecord" />
 		<form-bean name="editEmployeeForm"
 			type="com.empstruts.EditRecord" />
-		<form-bean name="LoginForm" type="com.empstruts.LoginForm" />
+
 	</form-beans>
 
 	<!-- ========== Action Mapping Definitions ============================= -->
