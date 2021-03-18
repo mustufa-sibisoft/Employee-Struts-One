@@ -8,8 +8,4 @@ public class DeleteRecord extends ActionForm {
 	public DeleteRecord() {
 		super();
 	}
-
-	public static void deleteEmployee(int id) {
-		EmployeeManager.deleteEmployee(id);
-	}
 }

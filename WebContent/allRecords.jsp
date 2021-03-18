@@ -18,7 +18,8 @@
 		const dataAge = document.getElementById("age_" + id).innerText;
 		console.log(dataFullName, dataAge);
 		if (confirm("Are you sure to delete " + dataFullName + "?")) {
-			window.location.href = "DeleteRecord.do?id=" + id;
+			//window.location.href = "DeleteRecord.do?id=" + id;
+			window.location.href = "ManageRecord.do?method=delete&id=" + id;
 		}
 	}
 </script>
@@ -34,6 +35,7 @@
 	<!-- JSP Scriplet -->
 	<%
 	HttpSession s = request.getSession();
+	EmployeeManager.loadRecord();
 	s.setAttribute("empList", EmployeeManager.getAllEmployees());
 	%>
 

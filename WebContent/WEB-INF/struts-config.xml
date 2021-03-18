@@ -9,40 +9,20 @@
 	<!-- ========== Form Bean Definitions ================================== -->
 
 	<form-beans>
-		<form-bean name="insertRecord"
-			type="com.empstruts.AddEmployeeForm" />
-		<form-bean name="allRecordsForm"
-			type="com.empstruts.AllEmployee" />
-		<form-bean name="deleteRecordForm"
-			type="com.empstruts.DeleteRecord" />
-		<form-bean name="editEmployeeForm"
-			type="com.empstruts.EditRecord" />
-
+		<form-bean name="EmployeeForm"
+			type="com.empstruts.EmployeeForm">
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="fullName" type="java.lang.String" />
+			<form-property name="age" type="java.lang.String" />
+		</form-bean>
 	</form-beans>
 
 	<!-- ========== Action Mapping Definitions ============================= -->
 
 	<action-mappings>
-		<action name="inserRecord" path="/InsertRecord"
-			type="com.empstruts.AddEmployeeAction" scope="request">
-			<forward name="hello" path="/allRecords.jsp" />
-		</action>
-		<action name="allRecordsForm" path="/AllRecords"
-			type="com.empstruts.AllEmployeeAction" scope="request">
-			<forward name="hello" path="/allRecords.jsp" />
-		</action>
-		<action name="deleteRecordForm" path="/DeleteRecord"
-			type="com.empstruts.DeleteRecordAction" scope="request">
-			<forward name="hello" path="/allRecords.jsp" />
-		</action>
-		<action name="editRecordForm" path="/EditRecord"
-			type="com.empstruts.EditEmployeeAction" scope="request">
-			<forward name="hello" path="/allRecords.jsp" />
-		</action>
-		<action input="/login.jsp" name="LoginForm" path="/Login"
-			scope="session" type="com.empstruts.LoginAction">
-			<forward name="success" path="/success.jsp" />
-			<forward name="failure" path="/failure.jsp" />
+		<action input="/index.jsp" parameter="method" name="EmployeeForm"
+			path="/ManageRecord" scope="session" type="com.empstruts.EmployeeAction">
+			<forward name="seeAllRecords" path="/allRecords.jsp" />
 		</action>
 	</action-mappings>
 

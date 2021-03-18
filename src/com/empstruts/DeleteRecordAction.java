@@ -15,8 +15,8 @@ public class DeleteRecordAction extends Action {
 			HttpServletResponse response) throws Exception {
 
 		int id = Integer.parseInt(request.getParameter("id"));
-		DeleteRecord.deleteEmployee(id);
+		EmployeeManager.deleteEmployee(id);
 
-		return mapping.findForward("hello");
+		return mapping.findForward("seeAllRecords");
 	}
 }

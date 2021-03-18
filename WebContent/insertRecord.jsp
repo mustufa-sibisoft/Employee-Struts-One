@@ -9,6 +9,21 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
 	rel="stylesheet">
+
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+
+<style>
+.save-btn>input {
+	color: white;
+	background-color: #0d6efd;
+	border: 1px solid #0d6efd;
+	border-radius: .25rem;
+	padding: 4px;
+	width: 50px;
+	padding: 4px;
+}
+</style>
 </head>
 <body>
 
@@ -16,29 +31,27 @@
 		<br />
 		<h3>Add Employee</h3>
 		<br />
-		<form action="InsertRecord.do" method="get">
+		<html:form action="ManageRecord.do" method="get">
 			<div class="mb-3 row">
-				<label for="inputFullName" class="col-sm-2 col-form-label">Full
-					Name</label>
-				<div class="col">
-					<input type="text" class="form-control" id="inputFullName"
-						name="inputFullName" required>
+				<div class="col-lg-12">
+					<label class="col-sm-2 col-form-label">Full Name</label>
+
+					<html:text property="fullName" />
 				</div>
 			</div>
 			<div class="mb-3 row">
-				<label for="inputAge" class="col-sm-2 col-form-label">Age</label>
-				<div class="col">
-					<input type="number" class="form-control" id="inputAge"
-						name="inputAge" required>
+				<div class="col-lg-12">
+					<label class="col-sm-2 col-form-label">Age</label>
+					<html:text property="age" />
 				</div>
 			</div>
-			<br />
 			<div class="mb-3 row">
-				<div class="col">
-					<button type="submit" class="btn btn-primary mb-3">Save</button>
+				<div class="col-lg-12 save-btn">
+					<html:submit property="method" value="add" />
 				</div>
 			</div>
-		</form>
+		</html:form>
+
 	</div>
 
 
