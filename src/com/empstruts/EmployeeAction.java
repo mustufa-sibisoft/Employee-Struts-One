@@ -16,7 +16,7 @@ public class EmployeeAction extends DispatchAction {
 		return mapping.findForward("seeAllRecords");
 	}
 
-	public ActionForward add(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+	public ActionForward Save(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 
 		EmployeeForm empForm = (EmployeeForm) form;
@@ -27,7 +27,7 @@ public class EmployeeAction extends DispatchAction {
 		return mapping.findForward("seeAllRecords");
 	}
 
-	public ActionForward edit(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+	public ActionForward Update(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 
 		EmployeeForm empForm = (EmployeeForm) form;

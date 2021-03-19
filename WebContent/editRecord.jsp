@@ -20,7 +20,7 @@
 	border: 1px solid #0d6efd;
 	border-radius: .25rem;
 	padding: 4px;
-	width: 50px;
+	width: 70px;
 }
 </style>
 
@@ -64,7 +64,7 @@
 			</div>
 			<div class="mb-3 row">
 				<div class="col-lg-12 save-btn">
-					<html:submit property="method" value="edit" />
+					<html:submit property="method" value="Update" />
 				</div>
 			</div>
 		</html:form>

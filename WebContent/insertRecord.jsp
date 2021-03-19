@@ -47,7 +47,7 @@
 			</div>
 			<div class="mb-3 row">
 				<div class="col-lg-12 save-btn">
-					<html:submit property="method" value="add" />
+					<html:submit property="method" value="Save" />
 				</div>
 			</div>
 		</html:form>
