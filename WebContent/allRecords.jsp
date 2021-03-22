@@ -35,8 +35,8 @@
 	<!-- JSP Scriplet -->
 	<%
 	HttpSession s = request.getSession();
-	EmployeeManager.loadRecord();
-	s.setAttribute("empList", EmployeeManager.getAllEmployees());
+	//EmployeeService.loadRecord();
+	s.setAttribute("empList", EmployeeService.getAllEmployees());
 	%>
 
 	<div class="container">

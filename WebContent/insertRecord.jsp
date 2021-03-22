@@ -32,6 +32,7 @@
 		<h3>Add Employee</h3>
 		<br />
 		<html:form action="ManageRecord.do" method="get">
+		<html:hidden property="method" value="save" />
 			<div class="mb-3 row">
 				<div class="col-lg-12">
 					<label class="col-sm-2 col-form-label">Full Name</label>
@@ -47,7 +48,7 @@
 			</div>
 			<div class="mb-3 row">
 				<div class="col-lg-12 save-btn">
-					<html:submit property="method" value="Save" />
+					<html:submit value="Save" />
 				</div>
 			</div>
 		</html:form>

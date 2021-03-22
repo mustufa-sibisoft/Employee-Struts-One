@@ -32,7 +32,7 @@
 	<%
 	int id = Integer.parseInt(request.getParameter("id"));
 
-	Employee e = EmployeeManager.getEmployee(id);
+	Employee e = EmployeeService.getEmployee(id);
 
 	request.setAttribute("fullName", e.getFullName());
 	request.setAttribute("age", e.getAge());
@@ -44,6 +44,7 @@
 		<h3>Edit Employee</h3>
 		<br />
 		<html:form action="ManageRecord.do" method="get">
+		<html:hidden property="method" value="update" />
 			<div class="mb-3 row">
 				<div class="col-lg-12 d-none">
 					<label class="col-sm-2 col-form-label">ID</label>
@@ -64,7 +65,7 @@
 			</div>
 			<div class="mb-3 row">
 				<div class="col-lg-12 save-btn">
-					<html:submit property="method" value="Update" />
+					<html:submit value="Update" />
 				</div>
 			</div>
 		</html:form>

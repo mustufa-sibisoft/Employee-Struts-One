@@ -16,25 +16,25 @@ public class EmployeeAction extends DispatchAction {
 		return mapping.findForward("seeAllRecords");
 	}
 
-	public ActionForward Save(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+	public ActionForward save(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 
 		EmployeeForm empForm = (EmployeeForm) form;
 		String fullName = empForm.getFullName();
 		int age = Integer.parseInt(empForm.getAge());
-		EmployeeManager.addEmployee(fullName, age);
+		EmployeeService.addEmployee(fullName, age);
 
 		return mapping.findForward("seeAllRecords");
 	}
 
-	public ActionForward Update(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+	public ActionForward update(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 
 		EmployeeForm empForm = (EmployeeForm) form;
 		int id = Integer.parseInt(empForm.getId());
 		String fullName = empForm.getFullName();
 		int age = Integer.parseInt(empForm.getAge());
-		EmployeeManager.editEmployee(id, fullName, age);
+		EmployeeService.editEmployee(id, fullName, age);
 
 		return mapping.findForward("seeAllRecords");
 	}
@@ -43,7 +43,7 @@ public class EmployeeAction extends DispatchAction {
 			HttpServletResponse response) throws Exception {
 
 		int id = Integer.parseInt(request.getParameter("id"));
-		EmployeeManager.deleteEmployee(id);
+		EmployeeService.deleteEmployee(id);
 		return mapping.findForward("seeAllRecords");
 	}
 
